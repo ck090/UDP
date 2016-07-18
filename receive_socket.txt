@@ -1,0 +1,9 @@
+String string_variable;
+#define RECEIVE_IP          "127.0.0.1"
+
+unsigned short ReceivingPort = 8005;
+
+UdpInSocket inSocket_Ownship1(RECEIVE_IP,  ReceivingPort);    
+
+int32 ret1 = inSocket_Ownship1.receive((char*)&string_variable,sizeof(string_variable));
+
